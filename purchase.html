@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Purchase Form - Eden Shelters Ltd</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/logo-light.png" type="image/png" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Eden Shelters CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body style="background-color: #d8d8d8; color: #fff;">
+
+  <section class="property-form section">
+    <div class="container">
+      <p class="section-subtitle">Sales</p>
+      <h2 class="section-title">Property Purchase Form</h2>
+
+      <form action="/submit" method="POST" enctype="multipart/form-data" class="purchase-form-content">
+
+        <!-- 1. Personal Information -->
+        <fieldset>
+          <legend>1. Personal Information</legend>
+          <label>Full Name *<br><input type="text" name="full_name" required></label><br>
+          <label>Date of Birth *<br><input type="date" name="dob" required></label><br>
+          <label>Gender *<br>
+            <select name="gender" required>
+              <option value="">Select</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </label><br>
+          <label>Nationality *<br><input type="text" name="nationality" required></label><br>
+          <label>Marital Status *<br>
+            <select name="marital_status" required>
+              <option value="">Select</option>
+              <option>Single</option>
+              <option>Married</option>
+              <option>Divorced</option>
+              <option>Widowed</option>
+              <option>Other</option>
+            </select>
+          </label><br>
+          <label>Occupation *<br><input type="text" name="occupation" required></label><br>
+          <label>Upload Passport Photo *<br><input type="file" name="passport_photo" accept="image/*" required></label>
+        </fieldset>
+
+        <!-- 2. Contact Details -->
+        <fieldset>
+          <legend>2. Contact Details</legend>
+          <label>Phone Number(s) *<br><input type="text" name="phone_number" required></label><br>
+          <label>Email Address *<br><input type="email" name="email" required></label><br>
+          <label>Residential Address *<br><textarea name="residential_address" required></textarea></label><br>
+          <label>Preferred Mode of Communication *<br>
+            <select name="communication_mode" required>
+              <option value="">Select</option>
+              <option>Call</option>
+              <option>SMS</option>
+              <option>Email</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <!-- 3. Property Details -->
+        <fieldset>
+          <legend>3. Property Details</legend>
+          <label>Type of Property *<br>
+            <select name="property_type" required>
+              <option value="">Select</option>
+              <option>Land</option>
+              <option>House</option>
+              <option>Apartment</option>
+              <option>Commercial Property</option>
+            </select>
+          </label><br>
+          <label>Location of Interest *<br><textarea name="property_location" required></textarea></label><br>
+          <label>Plot Size *<br>
+            <select name="plot_size" required>
+              <option value="">Select</option>
+              <option>270 SQM</option>
+              <option>350 SQM</option>
+              <option>400 SQM</option>
+            </select>
+          </label><br>
+          <label>Number of Units *<br><input type="text" name="units" required></label><br>
+          <label>Purpose of Purchase *<br>
+            <select name="purchase_purpose" required>
+              <option value="">Select</option>
+              <option>Personal Use</option>
+              <option>Investment</option>
+              <option>Resale</option>
+              <option>Development</option>
+            </select>
+          </label><br>
+          <label>Preferred Payment Plan *<br>
+            <select name="payment_plan" required>
+              <option value="">Select</option>
+              <option>Outright Purchase</option>
+              <option>Installments</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <!-- 4. Identification -->
+        <fieldset>
+          <legend>4. Identification</legend>
+          <label>Means of Identification *<br>
+            <select name="id_type" required>
+              <option value="">Select</option>
+              <option>National ID</option>
+              <option>Voter's Card</option>
+              <option>International Passport</option>
+              <option>Driver’s License</option>
+            </select>
+          </label><br>
+          <label>ID Number *<br><input type="text" name="id_number" required></label><br>
+          <label>Upload Copy of ID *<br><input type="file" name="id_upload" accept="image/*,application/pdf" required></label>
+        </fieldset>
+
+        <!-- 5. Next of Kin -->
+        <fieldset>
+          <legend>5. Next of Kin Details</legend>
+          <label>Full Name *<br><input type="text" name="nok_name" required></label><br>
+          <label>Relationship *<br><input type="text" name="nok_relationship" required></label><br>
+          <label>Contact Information *<br><input type="text" name="nok_contact" required></label>
+        </fieldset>
+
+        <!-- 6. Financial Info -->
+        <fieldset>
+          <legend>6. Financial Information</legend>
+          <label>Amount *<br><input type="text" name="initial_deposit" required></label><br>
+          <label>Preferred Payment Method *<br>
+            <select name="payment_method" required>
+              <option value="">Select</option>
+              <option>Bank Transfer</option>
+              <option>POS</option>
+              <option>Cheque</option>
+            </select>
+          </label><br>
+          <label>Payer’s Full Name *<br><input type="text" name="payer_name" required></label><br>
+          <label>Bank Name *<br><input type="text" name="bank_name" required></label><br>
+          <label>Account Number *<br><input type="text" name="account_number" required></label>
+          <label>Upload Copy of Payment Reciept *<br><input type="file" name="id_upload" accept="image/*,application/pdf" required></label>
+        </fieldset>
+
+        <!-- 7. Sales Partner -->
+        <fieldset>
+          <legend>7. Additional Information</legend>
+          <label>Name of Sales Partner<br><input type="text" name="sales_partner"></label>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary">Submit Application</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
