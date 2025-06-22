@@ -336,7 +336,7 @@ button, a { transition: var(--transition); }
   padding: 4px 15px;
 }
 
-.header-top-btn:is(:hover, :focus) { --orange-soda: hsl(7, 72%, 46%); }
+.header-top-btn:is(:hover, :focus) { --orange-soda: hsl(41, 96%, 51%); }
 
 .header-bottom {
   background: var(--white);
@@ -499,6 +499,15 @@ button, a { transition: var(--transition); }
 .about-banner > img {
   max-width: max-content;
   width: 100%;
+  border-radius: 20px; /* Rounded corners */
+  object-fit: cover;   /* Ensures proper image crop */
+  height: auto;        /* Or set a fixed height if needed */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.603); /* Optional: soft shadow */
+}
+
+.about-banner > img {
+  max-width: max-content;
+  width: 100%;
 }
 
 .about-banner .abs-img {
@@ -553,7 +562,7 @@ button, a { transition: var(--transition); }
 }
 
 .about .callout {
-  background: hsla(7, 78%, 53%, 0.05);
+  background: hsla(0, 0%, 0%, 0.075);
   color: var(--cadet);
   font-size: var(--fs-5);
   font-weight: var(--fw-500);
