@@ -456,7 +456,6 @@ button, a { transition: var(--transition); }
 
 
 
-
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
@@ -682,7 +681,7 @@ button, a { transition: var(--transition); }
 }
 
 .map-box {
-  background-color: #111;
+  background-color: #ffffff;
   padding: 10px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(232, 141, 2, 0.15);
@@ -690,16 +689,16 @@ button, a { transition: var(--transition); }
 
 .map-heading {
   color: #e88d02;
-  margin-bottom: 10px;
   font-size: 1.25rem;
+  margin-bottom: 10px;
 }
 
 .map-address {
-  margin-bottom: 10px;
+  color: #000000;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #ccc;
 }
+
 
 .map-box iframe {
   width: 100%;
@@ -720,9 +719,35 @@ button, a { transition: var(--transition); }
   transition: background 0.3s;
 }
 
+.btn {
+  display: inline-flex;              /* Ensures flexible layout */
+  align-items: center;              /* Vertically center text */
+  justify-content: center;          /* Horizontally center text */
+  text-align: center;               /* Center inline text */
+  padding: 12px 24px;
+  background-color: #e88d02;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+
+.btn-inspect:hover {
+  color: #000 !important; /* Or any color you want on hover */
+}
+
+.btn-inspect {
+  transition: color 0.3s ease;
+}
+
 #map-location .btn:hover {
   background-color: #cf7c01;
 }
+
+
 
 /* Responsive Layout */
 @media (max-width: 768px) {
@@ -919,6 +944,59 @@ button, a { transition: var(--transition); }
 }
 
 
+/*-----------------------------------*\
+  #INSPECTION FORM
+\*-----------------------------------*/
+
+.inspection {
+  background: var(--cultured-2);
+  padding-block: var(--section-padding);
+}
+
+#inspection-form {
+  max-width: 600px;
+  margin-inline: auto;
+  display: grid;
+  gap: 20px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--eerie-black);
+}
+
+.input-field {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--eerie-black);
+}
+
+.input-field:focus {
+  border-color: #e88d02;
+  outline: none;
+}
+
+.btn {
+  padding: 12px;
+  background: #e88d02;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #cf7c01;
+}
 
 
 
